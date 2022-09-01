@@ -1,49 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Interactive rating component</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Rating state start -->
+    <title>Frontend Mentor | Interactive rating component</title>
 
-  How did we do?
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
 
-  Please let us know how we did with your support request. All feedback is appreciated 
-  to help us improve our offering!
+      /*---------------*/
 
-  1 2 3 4 5
+      root {
+        color: #ffffff;
+        color: #959eac;
+        color: #7c8798;
+        color: #252d37;
+        color: #121417;
+      }
 
-  Submit
+      body {
+        font-family: "Overpass", sans-serif;
+        color: hsl(0, 0%, 100%);
+      }
 
-  <!-- Rating state end -->
+      main {
+        width: 300px;
+        height: 300px;
+        background: rgb(18, 20, 23);
+        background: linear-gradient(
+          0deg,
+          rgba(18, 20, 23, 1) 1%,
+          rgba(37, 45, 55, 1) 44%,
+          rgba(60, 69, 81, 1) 83%,
+          rgba(90, 100, 114, 1) 92%,
+          rgba(124, 135, 152, 1) 100%
+        );
+        border-radius: 25px;
+        padding: 30px;
+      }
 
-  <!-- Thank you state start -->
+      .icon-star {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        background-color: #252d37;
+        width: 35px;
+        height: 35px;
+      }
 
-  You selected <!-- Add rating here --> out of 5
+      .star {
+        width: 17px;
+        height: 17px;
+      }
 
-  Thank you!
+      .description {
+        color: #959eac;
+        font-size: 15px;
+      }
 
-  We appreciate you taking the time to give a rating. If you ever need more support, 
-  don’t hesitate to get in touch!
+      .rating {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
 
-  <!-- Thank you state end -->
+      .rating button {
+        background-color: hsl(213, 19%, 18%);
+        color: hsl(0, 0%, 100%);
+        margin-top: 20px;
+        border: none;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+        transition: 0.3s;
+      }
 
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+      .rating button:hover {
+        background-color: hsl(25, 97%, 53%);
+      }
+
+      button.send {
+        background-color: hsl(25, 97%, 53%);
+        color: hsl(0, 0%, 100%);
+        margin-top: 20px;
+        border: none;
+        border-radius: 20px;
+        width: 100%;
+        height: 35px;
+        text-transform: uppercase;
+        transition: 0.3s;
+        cursor: pointer;
+        letter-spacing: 2px;
+      }
+
+      button.send:hover {
+        color: hsl(25, 97%, 53%);
+        background-color: hsl(0, 0%, 100%);
+      }
+    </style>
+  </head>
+  <body>
+    <main class="card">
+      <div class="icon-star">
+        <img src="images/icon-star.svg" class="star" />
+      </div>
+      <h2 class="title">How did we do?</h2>
+      <p class="description">
+        Please let us know how we did with your support request. All feedback is
+        appreciated to help us improve our offering!
+      </p>
+
+      <div class="rating">
+        <button class="rate-1">1</button>
+        <button class="rate-2">2</button>
+        <button class="rate-3">3</button>
+        <button class="rate-4">4</button>
+        <button class="rate-5">5</button>
+      </div>
+
+      <button type="submit" class="send">submit</button>
+    </main>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div>
+  </body>
 </html>
